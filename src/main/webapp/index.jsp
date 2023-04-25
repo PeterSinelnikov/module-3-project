@@ -11,38 +11,31 @@
             width: 700px;
         }
     </style>
-    <script src="static/jquery-3.6.0.js"></script>
-    <script>
-        /*function submit() {
-            let name = $('#name').val();
-            $.ajax({
-                url: '/start',
-                type: 'POST',
-                contentType: 'application/json;charset=UTF-8',
-                data: name,
-                async: false,
-            });
-        }*/
-    </script>
 </head>
 <body>
-<h2>Пролог</h2>
+<%
+    Integer counter = 0;
+    session.setAttribute("counter",counter);
+%>
+<h2>Prologue</h2>
 <p>
-    Ты стоишь в космическом порту и готов подняться на борт своего корабля.
-    Разве ты не об этом мечтал? Стать капитаном галакического судна с экипажем,
-    который будет совершать подвиги под твоим командованием.
+    Welcome to the ultimate test of survival skills, where your every decision determines whether you live or die.
+    In this quest-game, you will find yourself stranded in the middle of a dense forest after surviving a plane crash.
+    You are alone and vulnerable, with nothing but your wits to keep you alive.
+</p>
+<p>
+    You must navigate a series of binary choices, each with its own set of risks and rewards.
+    Will you make the right decisions and emerge victorious, or will you succumb to the harsh realities of the wilderness?
+</p>
+<p>
+    As you set out on your journey, remember that every step counts.
+    Your survival depends on your ability to think clearly, act decisively, and remain focused in the face of danger.
+</p>
+<p>
+    Are you ready to put your survival skills to the test? Let's begin.
 </p>
 <br>
-<h2>Знакомство с экипажем</h2>
-<p>
-    Когда ты поднялся на борт корабля, тебя поприветствовала девушка с черной папкой в руках:
-    <br>
-    - Здравствуйте, командир! Я Зинаида - ваша помощница. Видите? Там в углу пьет кофе наш штурман -
-    сержант Перегарный Штейф, под штурвалом спит наш бортмеханик - Черный Богдан, а фотографирует его
-    Сергей Стальная Пятка - наш навигатор.
-</p>
 <div>
-    <%--<input id="name">--%>
     <button id="playerName" value="submit" onclick="window.location='/start'">Поехали!</button>
 </div>
 </body>

@@ -10,39 +10,25 @@
             width: 700px;
         }
     </style>
-    <script src="static/jquery-3.6.0.js"></script>
-    <script>
-        $(document).on('click', '#firstOption', function () {
-            let submitBtn = $('<button value="submit">Отправить</button>');
-            submitBtn.click(function () {
-                window.location='/game?option=yes';
-            });
-            $("#submitButton").empty().append(submitBtn);
-        })
-        $(document).on('click', '#secondOption', function () {
-            let submitBtn = $('<button value="submit">Отправить</button>');
-            submitBtn.click(function () {
-                window.location='/game?option=no';
-            });
-            $("#submitButton").empty().append(submitBtn);
-        })
-    </script>
 </head>
 <body>
 <%
-    TreeNode node = (TreeNode) request.getSession().getAttribute("node");
+    TreeNode node = (TreeNode) session.getAttribute("node");
+    Integer counter = (Integer) session.getAttribute("counter");
 %>
-<fieldset>
-    <legend><%= node.getValue()%></legend>
-    <div>
-        <input type="radio" id="firstOption" name="drone" value="yes">
-        <label for="firstOption"><%= node.getYesNode().getWelcomeText()%></label>
-        <br>
-        <input type="radio" id="secondOption" name="drone" value="no">
-        <label for="secondOption"><%= node.getNoNode().getWelcomeText()%></label>
-    </div>
+
+<br>
+<form action="/game" method="get">
+    <p><%= node.getValue()%></p>
+    <input type="radio" id="param1" name="option" value="yes">
+    <label for="param1"><%= node.getYesNode().getWelcomeText()%></label><br>
+    <input type="radio" id="param2" name="option" value="no">
+    <label for="param2"><%= node.getNoNode().getWelcomeText()%></label><br>
     <br>
-    <div id="submitButton"></div>
-</fieldset>
+    <input type="submit" value="Make choice">
+</form>
+<br><br>
+<h4>Number of attempts: <%= counter%></h4>
+
 </body>
 </html>

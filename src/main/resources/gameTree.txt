@@ -1,15 +1,39 @@
-Начать игру;Ты потерял память. Принять вызов НЛО?
-Принять вызов;Ты принял вызов. Поднимешься на мостик к капитану?
-Подняться на мостик;Ты поднялся на мостик, ты кто?
-Рассказать правду о себе;Тебя вернули домой. Победа!
+Beginning;You find yourself stranded in the middle of a dense forest after the airplane crash. You're alone and unsure of what to do. You have two options:
+Stay put and wait for rescue.;You decide to stay put and wait for rescue. Days go by, but no rescue team comes. You're running out of food and water. Suddenly, you hear a loud noise coming from a nearby bush. You have two options:
+Investigate the noise.;You cautiously approach the bush and find a wild animal. It attacks you, and you have no way to defend yourself. You die.
 #
 #
-Солгать о себе;Твою ложь разоблачили. Поражение!
+Stay put and hope it goes away.;You stay put and wait. The noise eventually goes away, but you realize that you've run out of water. You die of dehydration.
 #
 #
-Отказаться подниматься на мостик;Ты не пошел на переговоры. Поражение!
+Start walking in a random direction.;You decide to start walking in a random direction. You come across a river. You have two options:
+Drink from the river.;You drink from the river, but the water is contaminated. You contract a deadly disease and die.
 #
 #
-Отклонить вызов;Ты отклонил вызов. Поражение!
+Keep walking and find a different water source.;You keep walking and eventually find a clean water source. After finding a clean water source, you have two options:
+Build a shelter near the water source.;You build a shelter near the water source, but it's not sturdy enough to withstand a storm that hits the area. The shelter collapses on you, and you die.
+#
+#
+Keep walking and look for a better place to set up camp.;You keep walking and eventually come across a cave. You decide to set up camp inside the cave. You have two options:
+Build a fire inside the cave.;You build a fire inside the cave to keep warm, but the smoke attracts predators. You're attacked and killed.
+#
+#
+Don't build a fire to avoid attracting predators.;You don't build a fire and manage to avoid attracting predators. However, it gets very cold during the night, and you don't have enough warm clothing. You have two options:
+Try to find more clothing or material to keep warm.;You venture out to find more clothing or material to keep warm. You come across a group of hostile people who attack you. You die.
+#
+#
+Tough it out and hope you survive the cold.;You tough it out and manage to survive the cold. The next morning, you wake up feeling very weak. You have two options:
+Look for food to regain your strength.;You set out to look for food and eventually find a wild berry bush. You eat the berries, but they turn out to be poisonous. You die.
+#
+#
+Wait for rescue, hoping someone will find you.;After spending a few days in the cave, you begin to feel hopeless. You've tried everything you can think of, but survival seems impossible. Just when you're about to give up, you notice something glinting in the distance. You have two options:
+Investigate the glinting object.;You venture out to investigate the glinting object, and after several hours of hiking, you discover that it's a piece of metal from the airplane wreckage. This gives you hope, and you decide to make the treacherous journey back to the crash site. You have two options:
+Search the wreckage for supplies and tools.;You carefully search the wreckage and find several useful supplies, including a knife, a first aid kit, and some food rations. You use these supplies to survive until rescue arrives. Congratulations! You survived!
+#
+#
+Use the wreckage to build a signal fire to attract rescuers.;You use the wreckage to build a signal fire, and after several days of waiting, you're finally spotted by a passing rescue helicopter. You're saved! Congratulations!
+#
+#
+Stay put and continue to wait for rescue;You wait for rescue, but no one comes. You eventually succumb to hunger and die.
 #
 #

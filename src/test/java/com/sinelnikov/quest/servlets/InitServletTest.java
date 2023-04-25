@@ -56,7 +56,9 @@ class InitServletTest {
                 (mock, context) -> when(mock.read(PATH_TO_GAME_TREE)).thenReturn(data));
              MockedConstruction<BinaryTreeDeserializer> deserializer = mockConstruction(BinaryTreeDeserializer.class,
                      (mock, context) -> when(mock.deserialize(data)).thenReturn(root))) {
+            when(session.getAttribute("counter")).thenReturn(0);
             initServlet.doGet(request,response);
+            verify(session).setAttribute("counter",1);
             verify(session).setAttribute("node",root);
             verify(requestDispatcher).forward(request,response);
         }
