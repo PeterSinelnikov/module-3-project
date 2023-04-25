@@ -7,10 +7,12 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
 public class BinaryTreeReader {
-    public BinaryTreeReader() {
+    private final ServletContext servletContext;
+    public BinaryTreeReader(ServletContext servletContext) {
+        this.servletContext = servletContext;
     }
 
-    public String read(ServletContext servletContext, String pathToTree){
+    public String read(String pathToTree){
         try (InputStream stream = servletContext.getResourceAsStream(pathToTree)) {
             return new String(stream.readAllBytes(), StandardCharsets.UTF_8);
         } catch (IOException e) {

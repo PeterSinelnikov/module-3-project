@@ -23,10 +23,10 @@ public class InitServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession(true);
         ServletContext servletContext = req.getServletContext();
-        String data = new BinaryTreeReader().read(servletContext, PATH_TO_GAME_TREE);
+        String data = new BinaryTreeReader(servletContext).read(PATH_TO_GAME_TREE);
         TreeNode root = new BinaryTreeDeserializer().deserialize(data);
         session.setAttribute("node", root);
-        getServletContext().getRequestDispatcher(QUEST_JSP).forward(req, resp);
+        servletContext.getRequestDispatcher(QUEST_JSP).forward(req,resp);
     }
 }
 

@@ -20,8 +20,8 @@ class BinaryTreeReaderTest {
 
     @BeforeEach
     void setUp() {
-        reader = new BinaryTreeReader();
         servletContext = mock(ServletContext.class);
+        reader = new BinaryTreeReader(servletContext);
     }
 
     @Test
@@ -30,7 +30,7 @@ class BinaryTreeReaderTest {
         String expectedContent = "Hello world!";
         ByteArrayInputStream stream = new ByteArrayInputStream(expectedContent.getBytes());
         when(servletContext.getResourceAsStream(pathToTree)).thenReturn(stream);
-        String actual = reader.read(servletContext, pathToTree);
+        String actual = reader.read(pathToTree);
         assertEquals("Hello world!", actual);
     }
 
@@ -43,7 +43,7 @@ class BinaryTreeReaderTest {
                     throw new IOException(expectedMessage);
                 });
         RuntimeException exception = assertThrows(RuntimeException.class,
-                () -> reader.read(servletContext, invalidPath));
+                () -> reader.read(invalidPath));
         assertEquals(expectedMessage, exception.getMessage());
     }
 }
