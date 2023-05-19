@@ -18,7 +18,7 @@ Keep walking and look for a better place to set up camp.;You keep walking and ev
 Build a fire inside the cave.;You build a fire inside the cave to keep warm, but the smoke attracts predators. You're attacked and killed.
 #
 #
-Don't build a fire to avoid attracting predators.;You don't build a fire and manage to avoid attracting predators. However, it gets very cold during the night, and you don't have enough warm clothing. You have two options:
+Don't build a fire.;You don't build a fire and manage to avoid attracting predators. However, it gets very cold during the night, and you don't have enough warm clothing. You have two options:
 Try to find more clothing or material to keep warm.;You venture out to find more clothing or material to keep warm. You come across a group of hostile people who attack you. You die.
 #
 #

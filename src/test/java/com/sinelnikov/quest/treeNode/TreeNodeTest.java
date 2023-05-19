@@ -19,14 +19,14 @@ class TreeNodeTest {
     @Test
     void hasNoChildren_passedNoChildNodes_shouldReturnTrue() {
         node = new TreeNode(validWelcomeText,validValue);
-        assertTrue(node.hasNoChildren());
+        assertTrue(node.isLeaf());
     }
 
     @Test
     void hasNoChildren_passedYesNode_shouldReturnFalse() {
         node = new TreeNode(validWelcomeText,validValue);
         node.setYesNode(new TreeNode(validWelcomeText,validValue));
-        assertFalse(node.hasNoChildren());
+        assertFalse(node.isLeaf());
     }
 
     @Test
@@ -34,7 +34,7 @@ class TreeNodeTest {
         node = new TreeNode(validWelcomeText,validValue);
         node.setYesNode(new TreeNode(validWelcomeText,validValue));
         node.setNoNode(new TreeNode(validWelcomeText,validValue));
-        assertFalse(node.hasNoChildren());
+        assertFalse(node.isLeaf());
     }
 
     @Test

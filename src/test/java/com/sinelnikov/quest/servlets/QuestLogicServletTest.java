@@ -57,8 +57,8 @@ class QuestLogicServletTest {
              MockedConstruction<ResponseResolver> responseRes = mockConstruction(ResponseResolver.class,
                      (mock, context) -> when(mock.resolve()).thenReturn("redirect"))) {
             servlet.doGet(request, response);
-            verify(session).setAttribute("node", selectedNode);
-            verify(response).sendRedirect("redirect");
+            verify(session,times(1)).setAttribute("node", selectedNode);
+            verify(response,times(1)).sendRedirect("redirect");
         }
     }
 
@@ -68,8 +68,8 @@ class QuestLogicServletTest {
         Object node = mock(TreeNode.class);
         when(session.getAttribute("node")).thenReturn(node);
         when(request.getParameter("option")).thenReturn(parameter);
-        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () ->
-                servlet.doGet(request, response));
+        IllegalArgumentException exception = assertThrows(
+                IllegalArgumentException.class, () -> servlet.doGet(request, response));
         assertEquals("Invalid request parameter: 'option'", exception.getMessage());
     }
 

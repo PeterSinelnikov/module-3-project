@@ -3,15 +3,12 @@ package com.sinelnikov.quest.treeNode;
 import lombok.Getter;
 import lombok.Setter;
 
+@Getter
 public class TreeNode {
-    @Getter
     private final String welcomeText;
-    @Getter
     private final String value;
-    @Getter
     @Setter
     private TreeNode yesNode;
-    @Getter
     @Setter
     private TreeNode noNode;
 
@@ -23,8 +20,8 @@ public class TreeNode {
         this.value = value;
     }
 
-    public boolean hasNoChildren() {
-        return this.yesNode ==null && this.noNode == null;
+    public boolean isLeaf() {
+        return this.yesNode == null && this.noNode == null;
     }
 
 }
