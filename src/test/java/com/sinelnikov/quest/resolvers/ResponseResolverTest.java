@@ -20,7 +20,7 @@ class ResponseResolverTest {
     @Test
     void resolve_passedNodeWithChildren_shouldReturnValidString() {
         node = Mockito.mock(TreeNode.class);
-        Mockito.when(node.hasNoChildren()).then(invocationOnMock -> true);
+        Mockito.when(node.isLeaf()).then(invocationOnMock -> true);
         resolver = new ResponseResolver(node);
         assertEquals("/gameOver.jsp",resolver.resolve());
     }

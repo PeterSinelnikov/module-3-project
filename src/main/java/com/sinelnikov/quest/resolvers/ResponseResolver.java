@@ -15,7 +15,7 @@ public class ResponseResolver {
     }
 
     public String resolve() {
-        if (node.hasNoChildren()) {
+        if (node.isLeaf()) {
             return GAME_OVER_JSP;
         } else {
             return QUEST_JSP;

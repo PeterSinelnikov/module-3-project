@@ -1,6 +1,7 @@
 package com.sinelnikov.quest.deserializer;
 
 import com.sinelnikov.quest.treeNode.TreeNode;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,7 +15,7 @@ public class BinaryTreeDeserializer {
 
 
     public TreeNode deserialize(String data) {
-        if (data == null || data.isBlank()) {
+        if (StringUtils.isEmpty(data)) {
             throw new IllegalArgumentException("no data for deserializing");
         }
         List<String> lines = new ArrayList<>(Arrays.asList(data.split(LINE_BREAK)));

@@ -27,8 +27,8 @@ public class InitServlet extends HttpServlet {
         TreeNode root = new BinaryTreeDeserializer().deserialize(data);
         session.setAttribute("node", root);
         Integer counter = getCounter(session);
-        session.setAttribute("counter",counter+1);
-        servletContext.getRequestDispatcher(QUEST_JSP).forward(req,resp);
+        session.setAttribute("counter", counter + 1);
+        servletContext.getRequestDispatcher(QUEST_JSP).forward(req, resp);
     }
 
     private Integer getCounter(HttpSession session) {
